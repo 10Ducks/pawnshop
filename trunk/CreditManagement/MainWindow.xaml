@@ -1,0 +1,21 @@
+﻿<Window x:Class="CreditManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
+        xmlns:local="clr-namespace:CreditManagement"
+        Title="Window1" Height="905" Width="960" Background="White" FontFamily="Arian AMU">
+    <Window.DataContext>
+        <!-- Declaratively create an instance of our SongViewModel -->
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/bg_tile.jpg" Stretch="None" TileMode="Tile" Viewport="0,0,256,256" ViewportUnits="Absolute" />
+        </Grid.Background>
+
+        <!--local:Login /-->
+        <local:RibbonMenu />
+        <local:SelectCustomer />
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="CreditManagement.RibbonMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ribbon="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" 
+             xmlns:local="clr-namespace:CreditManagement" mc:Ignorable="d" d:DesignHeight="233" d:DesignWidth="784">
+    <Grid  Name="gridMenu" Visibility="Visible">
+        <ribbon:Ribbon x:Name="ribbon" Margin="0,-22,0,22" FontFamily="Arian AMU">
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu FontSize="12" BorderBrush="#FF006900" Background="#FF00AD00">
+
+                    <ribbon:RibbonApplicationMenu.FooterPaneContent>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ribbon:RibbonButton Grid.Column="1" KeyDown="ExitButton"/>
+                            <ribbon:RibbonButton Grid.Column="2" />
+                        </Grid>
+                    </ribbon:RibbonApplicationMenu.FooterPaneContent>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:Ribbon.HelpPaneContentTemplate>
+                <DataTemplate>
+                    <ribbon:RibbonButton DataContext="{Binding}" />
+                </DataTemplate>
+            </ribbon:Ribbon.HelpPaneContentTemplate>
+
+            <ribbon:RibbonTab Header="Պայմանագրեր" KeyTip="P">
+
+                <ribbon:RibbonGroup Header="Խմբագրում">
+                    <ribbon:RibbonButton Content="Button" Height="61" HorizontalAlignment="Left" Margin="2,2,0,0" Name="ribbonButton1" VerticalAlignment="Top" Width="51" AllowDrop="False" Click="ribbonButton1_Click">
+                        <ribbon:RibbonButton.BorderBrush>
+                            <ImageBrush ImageSource="/CreditManagement;component/img/sales-report.ico" />
+                        </ribbon:RibbonButton.BorderBrush>
+                        <ribbon:RibbonButton.Background>
+                            <ImageBrush ImageSource="/CreditManagement;component/img/sales-report.ico" />
+                        </ribbon:RibbonButton.Background>
+                    </ribbon:RibbonButton>
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Փնտրում">
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Հաշվետվություն">
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab Header="Հաճախորդներ" KeyTip="H">
+
+                <ribbon:RibbonGroup Header="Խմբագրում">
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Փնտրում">
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab Header="Գույք" KeyTip="G">
+
+                <ribbon:RibbonGroup Header="Խմբագրում">
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab Header="Հաշվետվություններ" KeyTip="R">
+
+                <ribbon:RibbonGroup Header="Դիտել">
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab Header="Ադմինիստրատիվ" KeyTip="A">
+
+                <ribbon:RibbonGroup Header="Կարգավորումներ">
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Օգտագործողներ">
+
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:Ribbon.ContextualTabGroups>
+                <ribbon:RibbonContextualTabGroup Background="#FF64CD30"/>
+            </ribbon:Ribbon.ContextualTabGroups>
+
+        </ribbon:Ribbon>
+    </Grid>
+</UserControl>

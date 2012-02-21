@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CreditManagement.SelectItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CreditManagement" Height="565" Width="998">
+    <Grid Background="#FFF3F7FB" Height="705"  Name="grid3" VerticalAlignment="Top">
+        <Label Content="Ավելացնել գրավ դրվող գույք" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label6" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <Label Content="Տեսակ" Height="28" HorizontalAlignment="Left" Margin="6,35,0,0" Name="label7" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <Label Content="Ենթատեսակ" Height="28" HorizontalAlignment="Left" Margin="6,64,0,0" Name="label8" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <TextBox Height="52" HorizontalAlignment="Left" Margin="132,95,0,0" Name="textBox11" VerticalAlignment="Top" Width="452" MaxLines="10" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontFamily="Arian AMU" />
+        <Label Content="Նկարագրություն" Height="28" HorizontalAlignment="Left" Margin="6,93,0,0" Name="label9" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="132,153,0,0" Name="textBox12" VerticalAlignment="Top" Width="76" FontFamily="Arian AMU" />
+        <Label Content="Չափումներ" Height="28" HorizontalAlignment="Left" Margin="6,151,0,0" Name="label10" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <DataGrid AutoGenerateColumns="False" Height="346" IsTextSearchEnabled="True" ItemsSource="{Binding}" Margin="6,353,6,0" Name="dataGrid2" VerticalAlignment="Top" FontFamily="Arian AMU">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=EmployeeID}" Header="N" />
+                <DataGridTextColumn Binding="{Binding Path=OrderDate}" Header="Տեսակ" />
+                <DataGridTextColumn Binding="{Binding Path=RequiredDate}" Header="Ենթատեսակ" />
+                <DataGridTextColumn Binding="{Binding Path=ShippedDate}" Header="Նկարագրություն" />
+                <DataGridTextColumn Binding="{Binding Path=ShipVia}" Header="Չափումներ" />
+                <DataGridTextColumn Binding="{Binding Path=Freight}" Header="Հեռախոս" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="132,37,0,0" Name="comboBox1" VerticalAlignment="Top" Width="452" FontFamily="Arian AMU" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="132,66,0,0" Name="comboBox2" VerticalAlignment="Top" Width="452" FontFamily="Arian AMU" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="214,153,0,0" Name="comboBox3" VerticalAlignment="Top" Width="84" FontFamily="Arian AMU" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="132,182,0,0" Name="textBox7" VerticalAlignment="Top" Width="76" FontFamily="Arian AMU" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="214,182,0,0" Name="comboBox4" VerticalAlignment="Top" Width="84" FontFamily="Arian AMU" />
+    </Grid>
+</UserControl>

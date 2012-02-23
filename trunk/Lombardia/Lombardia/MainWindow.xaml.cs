@@ -32,6 +32,12 @@ namespace Lombardia
         private void ribbonButton1_Click(object sender, RoutedEventArgs e)
         {
             // Create
+            Page1 selectCustomer = new Page1();
+            selectCustomer.next.Click += new RoutedEventHandler(next_customer_Click);
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(selectCustomer);
+            ribbonButton1_cancel.IsEnabled = true;
         }
 
         private void ribbonButton2_Click(object sender, RoutedEventArgs e)
@@ -62,12 +68,38 @@ namespace Lombardia
             else
             {
                 // Make login procedure
-                loginForm.IsEnabled = false;
-                loginForm.Visibility = Visibility.Hidden;
+                pageStack.Children.RemoveAt(1);
                 ribbon.IsEnabled = true;
             }
         }
 
+        private void next_customer_Click(object sender, RoutedEventArgs e)
+        {
+            // Clicked Next button on Create Contract Page
+            Page2 selectItem = new Page2();
+            selectItem.next.Click += new RoutedEventHandler(next_item_Click);
+            pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(selectItem);
+            ribbonButton1_finish.IsEnabled = true;
+        }
 
+        private void next_item_Click(object sender, RoutedEventArgs e)
+        {
+            // All contracts
+        }
+
+        private void ribbonButton1_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            // Cancel the contract creation
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
+        }
+
+        private void ribbonButton1_finish_Click(object sender, RoutedEventArgs e)
+        {
+            // Finish and print Contract
+        }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\MainWindow.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\App.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\Lombardia_MarkupCompile.cache
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\Lombardia.g.resources
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\Lombardia.Properties.Resources.resources
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\bin\Debug\Lombardia.exe
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\bin\Debug\Lombardia.pdb
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\Lombardia.exe
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\Lombardia\Lombardia\obj\x86\Debug\Lombardia.pdb

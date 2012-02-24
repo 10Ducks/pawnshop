@@ -76,7 +76,19 @@ namespace Lombardia
         private void next_customer_Click(object sender, RoutedEventArgs e)
         {
             // Clicked Next button on Create Contract Page
+            // Add itms to contract page
             Page2 selectItem = new Page2();
+            ComboBoxItem item1 = new ComboBoxItem();
+            item1.Content = "Առաջին տեսակ";
+            ComboBoxItem item2 = new ComboBoxItem();
+            item2.Content = "Երկրորդ տեսակ";
+            ComboBoxItem item3 = new ComboBoxItem();
+            item3.Content = "Երրորդ տեսակ";
+            selectItem.comboBox1.Items.Add(item1);
+            selectItem.comboBox1.Items.Add(item2);
+            selectItem.comboBox1.Items.Add(item3);
+
+            selectItem.comboBox1.SelectionChanged += new SelectionChangedEventHandler(comboBox1_SelectionChanged);
             selectItem.next.Click += new RoutedEventHandler(next_item_Click);
             pageStack.Children.RemoveAt(1);
             pageStack.Children.Add(selectItem);
@@ -100,6 +112,21 @@ namespace Lombardia
         private void ribbonButton1_finish_Click(object sender, RoutedEventArgs e)
         {
             // Finish and print Contract
+        }
+
+        private void comboBox1_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            // After Selecting Item First Type
+            // Second Combo must be filled with correct values
+            ComboBoxItem item1 = new ComboBoxItem();
+            item1.Content = "Առաջին տեսակ";
+            ComboBoxItem item2 = new ComboBoxItem();
+            item2.Content = "Երկրորդ տեսակ";
+            ComboBoxItem item3 = new ComboBoxItem();
+            item3.Content = "Երրորդ տեսակ";
+            var selectItem = pageStack.Children[1];
+            ((Page2)selectItem).comboBox2.Items.Add(item1);
+
         }
     }
 }

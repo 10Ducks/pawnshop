@@ -34,3 +34,5 @@ C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawn
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page2.baml
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page2.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page3.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page3.g.cs

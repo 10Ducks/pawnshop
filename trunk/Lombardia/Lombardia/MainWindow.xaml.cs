@@ -53,6 +53,12 @@ namespace Lombardia
         private void ribbonButton2_Click(object sender, RoutedEventArgs e)
         {
             // Search Contract
+            Page5 page = new Page5();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
         }
 
         private void ribbonButton3_Click(object sender, RoutedEventArgs e)
@@ -68,7 +74,13 @@ namespace Lombardia
 
         private void ribbonButton4_Click(object sender, RoutedEventArgs e)
         {
-            // All contracts
+            // All contracts Search by date
+            Page4 page = new Page4();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -207,6 +219,39 @@ namespace Lombardia
         {
             // Exit
             this.Close();
+        }
+
+        private void ribbonButton5_Click(object sender, RoutedEventArgs e)
+        {
+            // Add new Client
+            Page6 page = new Page6();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
+        }
+
+        private void ribbonButton6_Click(object sender, RoutedEventArgs e)
+        {
+            // Search Client
+            Page7 page = new Page7();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
+        }
+
+        private void ribbonButton7_Click(object sender, RoutedEventArgs e)
+        {
+            // Edit Client Data
+            Page8 page = new Page8();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
         }
     }
 }

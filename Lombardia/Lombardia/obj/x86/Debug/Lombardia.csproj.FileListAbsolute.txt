@@ -36,3 +36,13 @@ C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawn
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page2.g.cs
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page3.baml
 C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page3.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page4.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page4.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page5.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page5.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page7.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page6.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page7.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page6.g.cs
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page8.baml
+C:\Users\Art\Documents\Visual Studio 2010\Projects\Lombard\CreditManagement\pawnshop\Lombardia\Lombardia\obj\x86\Debug\Page8.g.cs

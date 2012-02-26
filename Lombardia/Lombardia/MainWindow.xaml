@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ribbon="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
-        Title="MainWindow" MinHeight="600" MinWidth="800" Loaded="Window_Loaded">
+        Title="MainWindow" MinHeight="600" MinWidth="800" Loaded="Window_Loaded" Icon="/Lombardia;component/img/1.ico">
 
     <Grid Name="mainGrid" Margin="0, 0, 0, 0">
         <Grid.RowDefinitions>
@@ -17,30 +17,32 @@
                         <ribbon:RibbonApplicationMenu FontSize="12" BorderBrush="#FF006900" Background="#FF00AD00">
                             <ribbon:RibbonApplicationMenuItem Header="Ելք"
                                                       x:Name="MenuItem1"
-                                                      ImageSource="/img/report.ico"
+                                                      ImageSource="/img/5.png"
                                                        Click="ExitButton"/>
                         </ribbon:RibbonApplicationMenu>
                     </ribbon:Ribbon.ApplicationMenu>
                     <ribbon:RibbonTab Header="Պայմանագրեր" KeyTip="P">
                         <ribbon:RibbonGroup Header="Խմբագրում">
-                            <ribbon:RibbonButton Label="Ստեղծել" x:Name="ribbonButton1" Click="ribbonButton1_Click" LargeImageSource="/img/report.ico"  VerticalAlignment="Center" />
-                            <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton1_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/report.ico"  VerticalAlignment="Center" IsEnabled="False" />
-                            <ribbon:RibbonButton Label="Ավարտել և տպել" x:Name="ribbonButton1_finish" Click="ribbonButton1_finish_Click" SmallImageSource="/img/report.ico"  VerticalAlignment="Center" IsEnabled="False" />
+                            <ribbon:RibbonButton Label="Ստեղծել" x:Name="ribbonButton1" Click="ribbonButton1_Click" LargeImageSource="/img/1.png"  VerticalAlignment="Center">
+                                <ribbon:RibbonButton.Background>
+                                    <ImageBrush />
+                                </ribbon:RibbonButton.Background>
+                            </ribbon:RibbonButton>
+                            <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton1_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/2.png"  VerticalAlignment="Center" IsEnabled="False" />
+                            <ribbon:RibbonButton Label="Ավարտել և տպել" x:Name="ribbonButton1_finish" Click="ribbonButton1_finish_Click" SmallImageSource="/img/3.png"  VerticalAlignment="Center" IsEnabled="False" />
                         </ribbon:RibbonGroup>
-                        <ribbon:RibbonGroup Header="Փնտրում">
-                            <ribbon:RibbonButton Label="Փնտրել" x:Name="ribbonButton2" Click="ribbonButton2_Click" LargeImageSource="/img/report.ico" />
+                    <ribbon:RibbonGroup Header="Հաշվետվություն">
+                            <ribbon:RibbonButton Label="Փնտրել" x:Name="ribbonButton2" Click="ribbonButton2_Click" LargeImageSource="/img/8.png" />
+                        
+                            <ribbon:RibbonButton Label="Թեժ ցուցակ" x:Name="ribbonButton3" Click="ribbonButton3_Click" SmallImageSource="/img/6.png" />
+                            <ribbon:RibbonButton Label="Ըստ ամսաթվի" x:Name="ribbonButton4" Click="ribbonButton4_Click" SmallImageSource="/img/7.png" />
                         </ribbon:RibbonGroup>
-                        <ribbon:RibbonGroup Header="Հաշվետվություն">
-                            <ribbon:RibbonButton Label="Թեժ ցուցակ" x:Name="ribbonButton3" Click="ribbonButton3_Click" SmallImageSource="/img/report.ico" />
-                            <ribbon:RibbonButton Label="Ըստ ամսաթվի" x:Name="ribbonButton4" Click="ribbonButton4_Click" SmallImageSource="/img/report.ico" />
+                        <ribbon:RibbonGroup Header="Հաճախորդ">
+                            <ribbon:RibbonButton Label="Ավելացնել" x:Name="ribbonButton5" Click="ribbonButton5_Click" LargeImageSource="/img/4.png" />
+                            <ribbon:RibbonButton Label="Փնտրել" x:Name="ribbonButton6" Click="ribbonButton6_Click" SmallImageSource="/img/9.png" />
+                            <ribbon:RibbonButton Label="Խմբագրել" x:Name="ribbonButton7" Click="ribbonButton7_Click" SmallImageSource="/img/10.png" />
                         </ribbon:RibbonGroup>
-                    </ribbon:RibbonTab>
-                    <ribbon:RibbonTab Header="Հաճախորդներ" KeyTip="H">
-                        <ribbon:RibbonGroup Header="Խմբագրում">
-                        </ribbon:RibbonGroup>
-                        <ribbon:RibbonGroup Header="Փնտրում">
-                        </ribbon:RibbonGroup>
-                    </ribbon:RibbonTab>
+                    </ribbon:RibbonTab>                    
                     <ribbon:RibbonTab Header="Գույք" KeyTip="G">
                         <ribbon:RibbonGroup Header="Խմբագրում">
                         </ribbon:RibbonGroup>

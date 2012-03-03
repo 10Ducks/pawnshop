@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
 
 namespace Lombardia
 {
@@ -24,6 +25,8 @@ namespace Lombardia
         public MainWindow()
         {
             InitializeComponent();
+            ribbonButton8.Label = InputLanguageManager.Current.CurrentInputLanguage.DisplayName;
+            InputLanguageManager.Current.InputLanguageChanged += new InputLanguageEventHandler(Current_InputLanguageChanged);
         }
 
         private void ribbonButton1_Click(object sender, RoutedEventArgs e)
@@ -31,22 +34,24 @@ namespace Lombardia
             // Create
             Page1 selectCustomer = new Page1();
             selectCustomer.next.Click += new RoutedEventHandler(next_customer_Click);
-            selectCustomer.countrys.SelectionChanged +=new SelectionChangedEventHandler(countrys_SelectionChanged);
+            selectCustomer.inpPassport1.SelectionChanged += new SelectionChangedEventHandler(inpPassport1_SelectionChanged);
+            selectCustomer.inpSName.TextChanged += new TextChangedEventHandler(inputedName_TextChanged);
 
             if (countryList == null)
                 countryList = new Countrys();
 
             foreach (string country in countryList.list)
             {
-                selectCustomer.countrys.Items.Add(country);
+                selectCustomer.inpPassport1.Items.Add(country);
             }
 
-            selectCustomer.countrys.SelectedIndex = 0;
-
+            selectCustomer.inpPassport1.SelectedIndex = 0;
+            //selectCustomer.dataGrid1.Height = mainGrid.ActualHeight - 450;
             if (pageStack.Children.Count > 1)
                 pageStack.Children.RemoveAt(1);
             pageStack.Children.Add(selectCustomer);
             ribbonButton1_cancel.IsEnabled = true;
+             
             
         }
 
@@ -158,7 +163,7 @@ namespace Lombardia
 
         }
 
-        private void countrys_SelectionChanged(object sender, RoutedEventArgs e)
+        private void inpPassport1_SelectionChanged(object sender, RoutedEventArgs e)
         {
             // If country is changed, passport format must be changed also   
             if (pageStack.Children.Count > 1)
@@ -166,25 +171,25 @@ namespace Lombardia
                 var selectItem = pageStack.Children[1];
                 if (selectItem.GetType().Name == "Page1")
                 {
-                    if (((Page1)selectItem).countrys.SelectedIndex == 0)
+                    if (((Page1)selectItem).inpPassport1.SelectedIndex == 0)
                     {
-                        ((Page1)selectItem).textBox3.Visibility = System.Windows.Visibility.Visible;
-                        ((Page1)selectItem).textBox3.Text = String.Empty;
-                        ((Page1)selectItem).textBox4.Width = 190;
-                        ((Page1)selectItem).textBox4.Margin = new Thickness(394, 126, 0, 0);
+                        ((Page1)selectItem).inpPassport2.Visibility = System.Windows.Visibility.Visible;
+                        ((Page1)selectItem).inpPassport2.Text = String.Empty;
+                        ((Page1)selectItem).inpPassport3.Width = 190;
+                        ((Page1)selectItem).inpPassport3.Margin = new Thickness(394, 126, 0, 0);
                         ((Page1)selectItem).label9.IsEnabled = true;
-                        ((Page1)selectItem).textBox9.IsEnabled = true;
-                        ((Page1)selectItem).textBox10.IsEnabled = true;
+                        ((Page1)selectItem).inpPassport4.IsEnabled = true;
+                        ((Page1)selectItem).inpPassport5.IsEnabled = true;
                     }
                     else
                     {
-                        ((Page1)selectItem).textBox3.Visibility = System.Windows.Visibility.Hidden;
-                        ((Page1)selectItem).textBox3.Text = String.Empty;
-                        ((Page1)selectItem).textBox4.Width = 239;
-                        ((Page1)selectItem).textBox4.Margin = new Thickness(345, 126, 0, 0);
+                        ((Page1)selectItem).inpPassport2.Visibility = System.Windows.Visibility.Hidden;
+                        ((Page1)selectItem).inpPassport2.Text = String.Empty;
+                        ((Page1)selectItem).inpPassport3.Width = 239;
+                        ((Page1)selectItem).inpPassport3.Margin = new Thickness(345, 126, 0, 0);
                         ((Page1)selectItem).label9.IsEnabled = false;
-                        ((Page1)selectItem).textBox9.IsEnabled = false;
-                        ((Page1)selectItem).textBox10.IsEnabled = false;
+                        ((Page1)selectItem).inpPassport4.IsEnabled = false;
+                        ((Page1)selectItem).inpPassport5.IsEnabled = false;
                     }
                 }
             }
@@ -252,6 +257,26 @@ namespace Lombardia
             pageStack.Children.Add(page);
             ribbonButton1_cancel.IsEnabled = false;
             ribbonButton1_finish.IsEnabled = false;
+        }
+
+        private void Current_InputLanguageChanged(object sender, InputLanguageEventArgs e)
+        {
+            ribbonButton8.Label = InputLanguageManager.Current.CurrentInputLanguage.DisplayName;
+        }
+
+        private void ribbonButton8_Click(object sender, RoutedEventArgs e)
+        {
+            InputLanguageManager.Current.CurrentInputLanguage = CultureInfo.CreateSpecificCulture("hy");
+            ribbonButton8.Label = InputLanguageManager.Current.CurrentInputLanguage.DisplayName;
+        }
+
+        private void inputedName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox name = (TextBox)sender;
+            if (name.Text.StartsWith("Art"))
+            {
+                 
+            }
         }
     }
 }

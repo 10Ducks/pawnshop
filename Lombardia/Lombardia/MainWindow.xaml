@@ -42,6 +42,9 @@
                             <ribbon:RibbonButton Label="Փնտրել" x:Name="ribbonButton6" Click="ribbonButton6_Click" SmallImageSource="/img/9.png" />
                             <ribbon:RibbonButton Label="Խմբագրել" x:Name="ribbonButton7" Click="ribbonButton7_Click" SmallImageSource="/img/10.png" />
                         </ribbon:RibbonGroup>
+                        <ribbon:RibbonGroup Header="Կարգավորումներ">
+                            <ribbon:RibbonButton Label="" x:Name="ribbonButton8" Click="ribbonButton8_Click" ToolTipDescription="Փոխել հայերեն" />
+                        </ribbon:RibbonGroup>
                     </ribbon:RibbonTab>                    
                     <ribbon:RibbonTab Header="Գույք" KeyTip="G">
                         <ribbon:RibbonGroup Header="Խմբագրում">

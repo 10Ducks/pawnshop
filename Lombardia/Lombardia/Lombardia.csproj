@@ -98,6 +98,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Page8.xaml.cs">
       <DependentUpon>Page8.xaml</DependentUpon>
     </Compile>

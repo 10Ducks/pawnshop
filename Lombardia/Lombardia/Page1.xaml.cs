@@ -23,5 +23,10 @@ namespace Lombardia
         {
             InitializeComponent();
         }
+
+        private void grid2_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            dataGrid1.Height = Application.Current.MainWindow.ActualHeight - 445;
+        }
     }
 }

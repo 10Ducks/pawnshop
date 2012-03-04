@@ -36,6 +36,7 @@ namespace Lombardia
             selectCustomer.next.Click += new RoutedEventHandler(next_customer_Click);
             selectCustomer.inpPassport1.SelectionChanged += new SelectionChangedEventHandler(inpPassport1_SelectionChanged);
             selectCustomer.inpSName.TextChanged += new TextChangedEventHandler(inputedName_TextChanged);
+            selectCustomer.dataGrid1.MouseDoubleClick += new MouseButtonEventHandler(dataGrid1_MouseDoubleClick);
 
             if (countryList == null)
                 countryList = new Countrys();
@@ -153,13 +154,17 @@ namespace Lombardia
             // After Selecting Item First Type
             // Second Combo must be filled with correct values
             ComboBoxItem item1 = new ComboBoxItem();
-            item1.Content = "Առաջին տեսակ";
+            item1.Content = "Առաջին ենթատեսակ";
             ComboBoxItem item2 = new ComboBoxItem();
-            item2.Content = "Երկրորդ տեսակ";
+            item2.Content = "Երկրորդ ենթատեսակ";
             ComboBoxItem item3 = new ComboBoxItem();
-            item3.Content = "Երրորդ տեսակ";
+            item3.Content = "Երրորդ ենթատեսակ";
             var selectItem = pageStack.Children[1];
+            ((Page2)selectItem).comboBox2.Items.Clear();
             ((Page2)selectItem).comboBox2.Items.Add(item1);
+            ((Page2)selectItem).comboBox2.Items.Add(item2);
+            ((Page2)selectItem).comboBox2.Items.Add(item3);
+            ((Page2)selectItem).comboBox2.SelectedIndex = 0;
 
         }
 
@@ -204,14 +209,14 @@ namespace Lombardia
                 if (selectItem.GetType().Name == "Page2")
                 {
                     Item added_item = new Item();
-                    added_item.itemType = ((Page2)selectItem).comboBox1.SelectionBoxItem.ToString();
-                    added_item.itemSubType = ((Page2)selectItem).comboBox2.SelectionBoxItem.ToString();
+                    added_item.itemType = ((Page2)selectItem).comboBox1.Text;
+                    added_item.itemSubType = ((Page2)selectItem).comboBox2.Text;
                     added_item.descr = ((Page2)selectItem).textBox11.Text;
 
                     added_item.measure_value1 = ((Page2)selectItem).textBox12.Text;
-                    added_item.measure_unit1 = ((Page2)selectItem).comboBox3.SelectionBoxItem.ToString();
+                    added_item.measure_unit1 = ((Page2)selectItem).comboBox3.Text;
                     added_item.measure_value2 = ((Page2)selectItem).textBox7.Text;
-                    added_item.measure_unit2 = ((Page2)selectItem).comboBox4.SelectionBoxItem.ToString();
+                    added_item.measure_unit2 = ((Page2)selectItem).comboBox4.Text;
 
                     ((Page2)selectItem).dataGrid1.Items.Add(added_item);
 
@@ -273,10 +278,67 @@ namespace Lombardia
         private void inputedName_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox name = (TextBox)sender;
+            var selectItem = pageStack.Children[1];
             if (name.Text.StartsWith("Art"))
             {
-                 
+                Customer suggest = new Customer("Ավետիսյան", "Արտակ", "Սամվելի", "ՀՀ", "AG 32142, 004, 27/05/2009", "ք. Երևան, Իսակովի 3/4", "010265798, 093655869", "Ծնվ. 11/05/1988");
+
+                ((Page1)selectItem).dataGrid1.Items.Clear();
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest);
             }
+            else if (name.Text.StartsWith("Արտ"))
+            {
+                Customer suggest = new Customer("Ավետիսյան", "Արտակ", "Սամվելի", "ՀՀ", "AG 32142, 004, 27/05/2009", "ք. Երևան, Իսակովի 3/4", "010265798, 093655869", "Ծնվ. 11/05/1988");
+
+                ((Page1)selectItem).dataGrid1.Items.Clear();
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest);
+            }
+            else if (name.Text.StartsWith("Ավե"))
+            {
+                Customer suggest = new Customer("Ավետիսյան", "Արտակ", "Սամվելի", "ՀՀ", "AG 32142, 004, 27/05/2009", "ք. Երևան, Իսակովի 3/4", "010265798, 093655869", "Ծնվ. 11/05/1988");
+                Customer suggest1 = new Customer("Ավետիսյան", "Արամ", "Սամվելի", "ՀՀ", "AG 002511, 025, 27/05/2010", "ք. Երևան, Արշակունյաց 35, բն. 9", "010444875, 095599855", "Սոց. քարտ 541465435455");
+
+                ((Page1)selectItem).dataGrid1.Items.Clear();
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest);
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest1);
+            }
+            else if (name.Text.StartsWith("Ave"))
+            {
+                Customer suggest = new Customer("Ավետիսյան", "Արտակ", "Սամվելի", "ՀՀ", "AG 32142, 004, 27/05/2009", "ք. Երևան, Իսակովի 3/4", "010265798, 093655869", "Ծնվ. 11/05/1988");
+                Customer suggest1 = new Customer("Ավետիսյան", "Արամ", "Սամվելի", "ՀՀ", "AG 002511, 025, 27/05/2010", "ք. Երևան, Արշակունյաց 35, բն. 9", "010444875, 095599855", "Սոց. քարտ 541465435455");
+
+                ((Page1)selectItem).dataGrid1.Items.Clear();
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest);
+                ((Page1)selectItem).dataGrid1.Items.Add(suggest1);
+            }
+            else
+            {
+                ((Page1)selectItem).dataGrid1.Items.Clear();
+            }
+        }
+
+        private void dataGrid1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectItem = pageStack.Children[1];
+            Customer selected = (Customer)((DataGrid)sender).CurrentItem;
+            ((Page1)selectItem).inpSName.Text = selected.secondName;
+            ((Page1)selectItem).inpFName.Text = selected.firstName;
+            ((Page1)selectItem).inpMName.Text = selected.middleName;
+
+            ((Page1)selectItem).inpPassport1.Text = selected.country;
+            ((Page1)selectItem).inpPassport2.Text = selected.passportData.Split(new Char[] {',', ' '})[0];
+            ((Page1)selectItem).inpPassport3.Text = selected.passportData.Split(new Char[] { ',', ' ' })[1];
+            ((Page1)selectItem).inpPassport4.Text = selected.passportData.Split(new Char[] { ',', ' ' })[3];
+            ((Page1)selectItem).inpPassport5.Text = selected.passportData.Split(new Char[] { ',', ' ' })[5];
+
+            ((Page1)selectItem).inpAddress.Text = selected.address;
+            ((Page1)selectItem).inpPhone.Text = selected.phone;
+            ((Page1)selectItem).inpDetails.Text = selected.details;
+        }
+
+        private void ribbonButton9_Click(object sender, RoutedEventArgs e)
+        {
+            // Edit Items Tree
         }
     }
 }

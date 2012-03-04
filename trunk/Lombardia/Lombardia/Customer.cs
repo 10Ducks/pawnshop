@@ -6,33 +6,27 @@ using System.Text;
 namespace Lombardia
 {   
     class Customer
-    { 
-        public string secondName;
-        public string firstName;
-        public string middleName;
+    {
+        public string secondName { set; get; }
+        public string firstName { set; get; }
+        public string middleName { set; get; }
 
-        public string passportData1;
-        public string passportData2;
-        public string passportData3;
-        public string passportData4;
-        public string passportData5;
+        public string country { set; get; }
+        public string passportData { set; get; }
 
-        public string address;
-        public string phone;
-        public string details;
+        public string address { set; get; }
+        public string phone { set; get; }
+        public string details { set; get; }
 
 
-        public Customer(string secondName, string firstName, string middleName, string passport, string address, string phone, string details)
+        public Customer(string secondName, string firstName, string middleName, string country, string passport, string address, string phone, string details)
         {
             this.secondName = secondName;
             this.firstName = firstName;
             this.middleName = middleName;
 
-            this.passportData1 = (passport.Split(';'))[0];
-            this.passportData2 = (passport.Split(';'))[1];
-            this.passportData3 = (passport.Split(';'))[2];
-            this.passportData4 = (passport.Split(';'))[3];
-            this.passportData5 = (passport.Split(';'))[4];
+            this.country = country;
+            this.passportData = passport;
 
             this.address = address;
             this.phone = phone;

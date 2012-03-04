@@ -23,11 +23,7 @@
                     </ribbon:Ribbon.ApplicationMenu>
                     <ribbon:RibbonTab Header="Պայմանագրեր" KeyTip="P">
                         <ribbon:RibbonGroup Header="Խմբագրում">
-                            <ribbon:RibbonButton Label="Ստեղծել" x:Name="ribbonButton1" Click="ribbonButton1_Click" LargeImageSource="/img/1.png"  VerticalAlignment="Center">
-                                <ribbon:RibbonButton.Background>
-                                    <ImageBrush />
-                                </ribbon:RibbonButton.Background>
-                            </ribbon:RibbonButton>
+                            <ribbon:RibbonButton Label="Ստեղծել" x:Name="ribbonButton1" Click="ribbonButton1_Click" LargeImageSource="/img/1.png"  VerticalAlignment="Center" />
                             <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton1_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/2.png"  VerticalAlignment="Center" IsEnabled="False" />
                             <ribbon:RibbonButton Label="Ավարտել և տպել" x:Name="ribbonButton1_finish" Click="ribbonButton1_finish_Click" SmallImageSource="/img/3.png"  VerticalAlignment="Center" IsEnabled="False" />
                         </ribbon:RibbonGroup>
@@ -48,6 +44,7 @@
                     </ribbon:RibbonTab>                    
                     <ribbon:RibbonTab Header="Գույք" KeyTip="G">
                         <ribbon:RibbonGroup Header="Խմբագրում">
+                            <ribbon:RibbonButton Label="Գույքի ցուցակ" x:Name="ribbonButton9" Click="ribbonButton9_Click" LargeImageSource="/img/items.png"  VerticalAlignment="Center" />
                         </ribbon:RibbonGroup>
                     </ribbon:RibbonTab>
                     <ribbon:RibbonTab Header="Հաշվետվություններ" KeyTip="R">

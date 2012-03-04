@@ -11,7 +11,7 @@ namespace Lombardia
         public Countrys()
         {
             list = new List<string>();
-            list.Add("Հայաստան");
+            list.Add("ՀՀ");
             list.Add("Այլ...");
         }
     }

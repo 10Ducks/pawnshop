@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Lombardia.Page11"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+
+    
+    <Grid Name="grid2" Background="#FFF3F7FB" Margin="0,0,0,0" SizeChanged="grid2_SizeChanged">
+        <ToolBar x:Name="ToolBarOben" Margin="283,0,0,0" HorizontalAlignment="Left" Width="171" Height="27" VerticalAlignment="Top">
+            <Button x:Name="ToolStripButtonCut" Command="ApplicationCommands.Cut" ToolTip="Cut">
+                <Image Source="img\Cut.png" Stretch="None"/>
+            </Button>
+            <Button x:Name="ToolStripButtonCopy" Command="ApplicationCommands.Copy" ToolTip="Copy">
+                <Image Source="img\Copy.png" Stretch="None"/>
+            </Button>
+            <Button x:Name="ToolStripButtonPaste" Command="ApplicationCommands.Paste" ToolTip="Paste">
+                <Image Source="img\Paste.png" Stretch="None"/>
+            </Button>
+            <Button x:Name="ToolStripButtonUndo" Command="ApplicationCommands.Undo" ToolTip="Undo">
+                <Image Source="img\Undo.png" Stretch="None"/>
+            </Button>
+            <Button x:Name="ToolStripButtonRedo" Command="ApplicationCommands.Redo" ToolTip="Redo">
+                <Image Source="img\Redo.png" Stretch="None"/>
+            </Button>
+            <Separator/>
+            <ComboBox x:Name="Fontheight" DropDownClosed="Fontheight_DropDownClosed">
+            </ComboBox>
+        </ToolBar>
+        <ToolBar x:Name="ToolBarUnten" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="285">
+            <ToggleButton x:Name="ToolStripButtonBold" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                <Image Source="img\Bold.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonItalic" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                <Image Source="img\Italic.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonUnderline" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                <Image Source="img\Underline.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonStrikeout" ToolTip="Strikeout" Click="ToolStripButtonStrikeout_Click">
+                <Image Source="img\Strikeout.png" Stretch="None"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton x:Name="ToolStripButtonAlignLeft" Command="EditingCommands.AlignLeft" ToolTip="Align Left" Click="ToolStripButtonAlignLeft_Click">
+                <Image Source="img\AlignLeft.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonAlignCenter" Command="EditingCommands.AlignCenter" ToolTip="Align Center" Click="ToolStripButtonAlignCenter_Click">
+                <Image Source="img\AlignCenter.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonAlignRight" Command="EditingCommands.AlignRight" ToolTip="Align Right" Click="ToolStripButtonAlignRight_Click">
+                <Image Source="img\AlignRight.png" Stretch="None"/>
+            </ToggleButton>
+            <Separator/>
+            <Button x:Name="ToolStripButtonIndent" Command="EditingCommands.IncreaseIndentation" ToolTip="Increase Indent">
+                <Image Source="img\Indent.png" Stretch="None"/>
+            </Button>
+            <Button x:Name="ToolStripButtonIndentDelete" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
+                <Image Source="img\IndentRemove.png" Stretch="None"/>
+            </Button>
+            <Separator/>
+            <ToggleButton x:Name="ToolStripButtonSubscript" ToolTip="Subscript" Click="ToolStripButtonSubscript_Click">
+                <Image Source="img\Subscript.png" Stretch="None"/>
+            </ToggleButton>
+            <ToggleButton x:Name="ToolStripButtonSuperscript" ToolTip="Superscript" Click="ToolStripButtonSuperscript_Click">
+                <Image Source="img\Superscript.png" Stretch="None"/>
+            </ToggleButton>
+        </ToolBar>
+        <RichTextBox Name="RichTextControl" Margin="0,28,0,0" SpellCheck.IsEnabled="False" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Height="178" SelectionChanged="RichTextControl_SelectionChanged" TextChanged="RichTextControl_TextChanged" KeyDown="RichTextControl_KeyDown" KeyUp="RichTextControl_KeyUp">
+        </RichTextBox>
+    </Grid>
+</UserControl>

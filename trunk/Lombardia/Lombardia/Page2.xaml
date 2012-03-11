@@ -43,5 +43,6 @@
         </DataGrid>
         <Button Content="Հաջորդ" Height="39" HorizontalAlignment="Left" Margin="624,168,0,0" Name="next" VerticalAlignment="Top" Width="117" FontSize="16" />
         <Button Content="Ավելացնել" Height="39" HorizontalAlignment="Left" Margin="501,168,0,0" Name="button1" VerticalAlignment="Top" Width="117" FontSize="16" />
+        <Button Content="Հետ" FontSize="16" Height="39" HorizontalAlignment="Left" Margin="624,213,0,0" Name="button2" VerticalAlignment="Top" Width="117" />
     </Grid>
 </UserControl>

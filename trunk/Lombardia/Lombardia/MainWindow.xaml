@@ -24,14 +24,16 @@
                     <ribbon:RibbonTab Header="Պայմանագրեր" KeyTip="P">
                         <ribbon:RibbonGroup Header="Խմբագրում">
                             <ribbon:RibbonButton Label="Ստեղծել" x:Name="ribbonButton1" Click="ribbonButton1_Click" LargeImageSource="/img/1.png"  VerticalAlignment="Center" />
-                            <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton1_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/2.png"  VerticalAlignment="Center" IsEnabled="False" />
+                            <ribbon:RibbonButton Label="Դեպի սկիզբ" x:Name="ribbonButton1_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/11.png"  VerticalAlignment="Center" IsEnabled="False" />
                             <ribbon:RibbonButton Label="Ավարտել և տպել" x:Name="ribbonButton1_finish" Click="ribbonButton1_finish_Click" SmallImageSource="/img/3.png"  VerticalAlignment="Center" IsEnabled="False" />
+                            <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton1_delete" Click="ribbonButton1_delete_Click" SmallImageSource="/img/2.png"  VerticalAlignment="Center"/>
                         </ribbon:RibbonGroup>
                     <ribbon:RibbonGroup Header="Հաշվետվություն">
                             <ribbon:RibbonButton Label="Փնտրել" x:Name="ribbonButton2" Click="ribbonButton2_Click" LargeImageSource="/img/8.png" />
                         
                             <ribbon:RibbonButton Label="Թեժ ցուցակ" x:Name="ribbonButton3" Click="ribbonButton3_Click" SmallImageSource="/img/6.png" />
                             <ribbon:RibbonButton Label="Ըստ ամսաթվի" x:Name="ribbonButton4" Click="ribbonButton4_Click" SmallImageSource="/img/7.png" />
+                            <ribbon:RibbonButton Label="Պահպանել ֆայլում" x:Name="ribbonButton_export" Click="ribbonButton_export_Click" LargeImageSource="/img/12.png" />
                         </ribbon:RibbonGroup>
                         <ribbon:RibbonGroup Header="Հաճախորդ">
                             <ribbon:RibbonButton Label="Ավելացնել" x:Name="ribbonButton5" Click="ribbonButton5_Click" LargeImageSource="/img/4.png" />
@@ -53,6 +55,9 @@
                     </ribbon:RibbonTab>
                     <ribbon:RibbonTab Header="Ադմինիստրատիվ" KeyTip="A">
                         <ribbon:RibbonGroup Header="Կարգավորումներ">
+                            <ribbon:RibbonButton Label="Խմբագրել պայմանագիրը" x:Name="ribbonButton_editor" Click="ribbonButton_editor_Click" LargeImageSource="/img/13.png"  VerticalAlignment="Center" />
+                            <ribbon:RibbonButton Label="Պահպանել" x:Name="ribbonButton_save" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/14.png"  VerticalAlignment="Center"/>
+                            <ribbon:RibbonButton Label="Չեղյալ համարել" x:Name="ribbonButton_cancel" Click="ribbonButton1_cancel_Click" SmallImageSource="/img/2.png"  VerticalAlignment="Center"/>
                         </ribbon:RibbonGroup>
                         <ribbon:RibbonGroup Header="Օգտագործողներ">
                         </ribbon:RibbonGroup>

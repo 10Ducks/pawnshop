@@ -12,6 +12,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
+using System.Windows.Xps.Packaging;
+using System.Windows.Xps;
+using System.IO;
+using System.Windows.Xps.Serialization;
 
 namespace Lombardia
 {
@@ -132,7 +136,21 @@ namespace Lombardia
 
         private void next_item_Click(object sender, RoutedEventArgs e)
         {
-            // All contracts
+            // Print Page
+            Page10 selectItem = new Page10();
+
+            XpsDocument doc = new XpsDocument(@"asd.xps", FileAccess.ReadWrite);
+            //XpsDocumentWriter xpsWriter = XpsDocument.CreateXpsDocumentWriter(doc);
+            //XpsSerializationManager rsm = new XpsSerializationManager(new XpsPackagingPolicy(doc), false);
+            //FrameworkElement visual = null;
+            //rsm.SaveAsXaml(visual);
+            selectItem.documentViewer1.Document = doc.GetFixedDocumentSequence();
+            
+            //selectItem.documentViewer1.
+
+            pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(selectItem);
+            ribbonButton1_finish.IsEnabled = false;
         }
 
         private void ribbonButton1_cancel_Click(object sender, RoutedEventArgs e)
@@ -339,6 +357,33 @@ namespace Lombardia
         private void ribbonButton9_Click(object sender, RoutedEventArgs e)
         {
             // Edit Items Tree
+        }
+
+        private void ribbonButton1_delete_Click(object sender, RoutedEventArgs e)
+        {
+            // Delete a contract
+            Page9 page = new Page9();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = true;
+            ribbonButton1_finish.IsEnabled = false;
+        }
+
+        private void ribbonButton_export_Click(object sender, RoutedEventArgs e)
+        {
+            // Export to Excel
+        }
+
+        private void ribbonButton_editor_Click(object sender, RoutedEventArgs e)
+        {
+            // Show Document Template Editor
+            Page11 page = new Page11();
+            if (pageStack.Children.Count > 1)
+                pageStack.Children.RemoveAt(1);
+            pageStack.Children.Add(page);
+            ribbonButton1_cancel.IsEnabled = false;
+            ribbonButton1_finish.IsEnabled = false;
         }
     }
 }

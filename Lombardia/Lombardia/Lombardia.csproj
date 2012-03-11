@@ -39,12 +39,14 @@
     <ApplicationIcon>1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ReachFramework" />
     <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\RibbonControlsLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,6 +64,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Page11.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page10.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Page8.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +108,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Page11.xaml.cs">
+      <DependentUpon>Page11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page10.xaml.cs">
+      <DependentUpon>Page10.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Page8.xaml.cs">
       <DependentUpon>Page8.xaml</DependentUpon>
@@ -130,11 +146,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page9.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page9.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -194,6 +215,36 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\items.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\AlignCenter.png" />
+    <Resource Include="img\AlignLeft.png" />
+    <Resource Include="img\AlignRight.png" />
+    <Resource Include="img\Bold.png" />
+    <Resource Include="img\Copy.png" />
+    <Resource Include="img\Cut.png" />
+    <Resource Include="img\Indent.png" />
+    <Resource Include="img\IndentRemove.png" />
+    <Resource Include="img\Italic.png" />
+    <Resource Include="img\Paste.png" />
+    <Resource Include="img\Redo.png" />
+    <Resource Include="img\Strikeout.png" />
+    <Resource Include="img\Subscript.png" />
+    <Resource Include="img\Superscript.png" />
+    <Resource Include="img\Underline.png" />
+    <Resource Include="img\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\14.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

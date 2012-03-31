@@ -1,0 +1,267 @@
+﻿<UserControl x:Class="Lombardia.Page13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+
+    <Grid Name="grid2" Background="#FFF3F7FB" Margin="0,0,0,0" SizeChanged="grid2_SizeChanged">
+        <Button Content="Տպել (2 օրինակ)" Name="PrintContract1" Height="28" Width="123" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Content="Չեղյալ համարել" Margin="0,12,12,0" Name="PrintContractCancel" Width="123" Height="28" VerticalAlignment="Top" HorizontalAlignment="Right" />
+        <FlowDocumentReader xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="reader1" Margin="14,49,-14,-3">
+            <FlowDocument Name="conractPage1" Background="White" FontFamily="Arian AMU" PageWidth="11.65in" PageHeight="8.27in" ColumnWidth="518.4">
+                <Table BorderBrush="Black" BorderThickness="0.5" CellSpacing="0">
+                    <Table.Columns>
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow >
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Վարկի մարման
+                                    <LineBreak/>ժամկետը երկարաձգվել
+                                    <LineBreak/> 
+                                    է մինչև
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5" />
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Հաստատված է
+                                    <LineBreak/>
+                                    (ամսաթիվ)
+                                    <LineBreak/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Վարկառուի
+                                    <LineBreak/> 
+                                    ստորագրությունը
+                                    <LineBreak/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Գրավատան ներկայացուցչի ստորագրությունը
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph FontFamily="Arian AMU" FontSize="11" Name="OptionalBlock">
+                    <LineBreak/>
+                    Ես՝
+                    <Run Name="ClientName1" FontWeight="Bold" FontStyle="Italic" FontSize="12">CLIENT NAME</Run>,
+                    Անձնագիր
+                    <Run Name="Passport1" FontWeight="Bold" FontStyle="Italic" FontSize="12">PASSPORT</Run>
+                    ցանկանում եմ տեղեկատվություն ստանալ N
+                    <Run Name="contractID3">000</Run>
+                    վարկային պայմանագրով առաջացած պարտավորություններիս վերաբերյալ.
+                    <LineBreak /><LineBreak />
+                    <Rectangle Height="15" Width="15" StrokeThickness="1" OpacityMask="Black" Stroke="Black"/>
+                    փոստային կապի միջոցով,
+                    <LineBreak />
+                    <Rectangle Height="15" Width="15" StrokeThickness="1" OpacityMask="Black" Stroke="Black"/>
+                    էլեկտրոնային կապի կամ կապի այլ միջոցով,
+                    <LineBreak />
+                    <Rectangle Height="15" Width="15" StrokeThickness="1" OpacityMask="Black" Stroke="Black"/>
+                    գրավատան տարածքում:
+                    <LineBreak />
+                    <LineBreak />
+                    Վարկառուի ստորագրություն՝ ______________________________
+                    <Run Name="Date2" FontWeight="Bold" FontStyle="Italic" FontSize="12">00 00 0000 թ.</Run>
+                </Paragraph>
+                <Table Name="OptionalTable" BorderBrush="Black" BorderThickness="0.5" CellSpacing="0">
+                    <Table.Columns>
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                        <TableColumn />
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow >
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Տեղեկատվության
+                                    <LineBreak/> տրամադրման
+                                    <LineBreak/> ամսաթիվ <LineBreak/>                                   
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5" />
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5">
+                                <Paragraph FontFamily="Arian AMU" FontSize="9">
+                                    Վարկառուի
+                                    <LineBreak/>
+                                    ստորագրությունը
+                                    <LineBreak/><LineBreak/>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                            <TableCell BorderBrush="Black" BorderThickness="0.5"/>
+                        </TableRow>
+                        
+                    </TableRowGroup>
+                </Table>
+                <Paragraph BreakColumnBefore="True">
+                    Գրավատոմս N
+                    <Run Name="contractID1">000</Run>
+                </Paragraph>
+                
+                <Paragraph FontFamily="Arian AMU" FontSize="11">
+                    Սույն գրավատոմսի համաձայն որպես գրավատու հանդես է գալիս գաղաքացի                    
+                    <Run Name="ClientName" FontWeight="Bold" FontStyle="Italic" FontSize="12">CLIENT NAME</Run>
+                    <LineBreak/>
+                    Անձնագիր
+                    <Run Name="Passport" FontWeight="Bold" FontStyle="Italic" FontSize="12">PASSPORT</Run>
+                    և որպես գրավառու՝ "Մուսոյան ԱԱԱ" ՍՊԸ-ն (գրավատունը՝ լիցենզիա N ԳԳ-Ե 101 տրված 09 դեկտեմբերի 2005թ.)
+                    սույն գրավատոմսով գրավադրվող  գրավի առարկան ապահովում է գրավատուի 
+                    կողմից N
+                    <Run Name="contractID2" FontWeight="Bold" FontStyle="Italic" FontSize="12">0.00</Run>
+                    վարկային պայմանագրով ստանձված պարտավորությունները:
+                    <LineBreak/>
+                    Գրավատուի կողմից գրավառուին որպես գրավի առարկա հանձնվում է հետևյալ շարժական գույքը՝                    
+                </Paragraph>
+                <List FontFamily="Arian AMU" FontSize="11" Name="ItemsList" MarkerStyle="Decimal">
+                        <ListItem>
+                            <Paragraph>ListItem 1</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 2</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 3</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 4</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 5</Paragraph>
+                        </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 6</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 7</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 8</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph FontFamily="Arian AMU" FontSize="11">, որը գնահատվել է
+                    
+                    <Run Name="RealCost" FontWeight="Bold" FontStyle="Italic" FontSize="12">0.00</Run>
+                    <Run Name="RealCostWords" FontWeight="Bold" FontStyle="Italic" FontSize="12">AMOUNT AMOUNT</Run>
+                    ՀՀ դրամ, և հանդիսանում է գրավատուի սեփականությունն ու գրավադրման պահին
+                    երրորդ անձի համար գրավի առարկա չի հանդիսանում:
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Underline>
+                        <Run Name="Date1" FontWeight="Bold" FontStyle="Italic" FontSize="12">00 00 0000 թ.</Run>
+                    </Underline>
+
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run xml:space="preserve" FontStyle="Italic">________________________________             V________________________________</Run>
+                    <LineBreak/>
+                    <Span FontSize="8" xml:space="preserve">(գրավատան ներկայացուցչի ստորագրությունը)                                                 (գրավատուի ստորագրությունը)</Span>
+                    <LineBreak/>
+                    Կ.Տ.
+                    <LineBreak/>
+                    <LineBreak/>
+                    Սույն գրավատոմսով նշված շարժական գույքը՝
+                </Paragraph>
+
+                <List FontFamily="Arian AMU" FontSize="11" Name="ItemsList1" MarkerStyle="Decimal">
+                    <ListItem>
+                        <Paragraph>ListItem 1</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 2</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 3</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 4</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 5</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 6</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 7</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 8</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph  FontFamily="Arian AMU" FontSize="11">
+                <LineBreak/>
+                    գրավատուի օրինական շահերի պահպանմամբ՝
+                    <LineBreak/>
+                    <Rectangle Height="15" Width="15" StrokeThickness="1" OpacityMask="Black" Stroke="Black"/>
+                    վերադարձվել է գրավատուին,
+                    <LineBreak/>
+                    <Rectangle Height="15" Width="15" StrokeThickness="1" OpacityMask="Black" Stroke="Black"/>
+                    հատուցվել է՝ __________________________________ գրավատուին
+                    <LineBreak/>
+                    <LineBreak/>
+                    _______________________
+                    <LineBreak/>
+                    <Span FontSize="8">(գրավատոմսի դադարման ամսաթիվը, ամիսը, տարեթիվը)</Span>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run xml:space="preserve" FontStyle="Italic">________________________________             V________________________________</Run>
+                    <LineBreak/>
+                    <Span FontSize="8" xml:space="preserve">(գրավատան ներկայացուցչի ստորագրությունը)                                                 (գրավատուի ստորագրությունը)</Span>
+                </Paragraph>
+            </FlowDocument>
+            
+        </FlowDocumentReader>
+        
+    </Grid>
+</UserControl>

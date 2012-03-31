@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Lombardia.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" >
+
+    <Grid Name="grid1" Background="#FFF3F7FB" Margin="0,0,0,0">
+        <Label Content="Առավել շուտ ավարտվող պայմանագրեր" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label6" VerticalAlignment="Top" FontFamily="Arian AMU" />
+        <DataGrid AutoGenerateColumns="False" Margin="6,40,6,12" Name="dataGrid1" ItemsSource="{Binding}" IsTextSearchEnabled="True" FontFamily="Arian AMU" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Ազգանուն" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Անուն" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Հայրանուն" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Անձնագրի համար" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Բացման ամսաթիվ" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Ավարտի ամսաթիվ" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Վերջին մուծման ամսաթիվ" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Մուծման ենթակա գումար" />
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Տույժ" />                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

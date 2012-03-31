@@ -64,39 +64,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Page11.xaml">
+    <Page Include="Views\Page13.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page10.xaml">
+    <Page Include="Views\Page12.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page8.xaml">
+    <Page Include="Views\Page11.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page7.xaml">
+    <Page Include="Views\Page10.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page6.xaml">
+    <Page Include="Views\Page8.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page5.xaml">
+    <Page Include="Views\Page7.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page4.xaml">
+    <Page Include="Views\Page6.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page3.xaml">
+    <Page Include="Views\Page5.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Page2.xaml">
+    <Page Include="Views\Page4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Page3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Page2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -108,54 +116,64 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Page11.xaml.cs">
+    <Compile Include="Classes\Contract.cs" />
+    <Compile Include="Classes\dictPercents.cs" />
+    <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\Utils.cs" />
+    <Compile Include="Views\Page13.xaml.cs">
+      <DependentUpon>Page13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Page12.xaml.cs">
+      <DependentUpon>Page12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Page11.xaml.cs">
       <DependentUpon>Page11.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page10.xaml.cs">
+    <Compile Include="Views\Page10.xaml.cs">
       <DependentUpon>Page10.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs" />
-    <Compile Include="Page8.xaml.cs">
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Views\Page8.xaml.cs">
       <DependentUpon>Page8.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page7.xaml.cs">
+    <Compile Include="Views\Page7.xaml.cs">
       <DependentUpon>Page7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page6.xaml.cs">
+    <Compile Include="Views\Page6.xaml.cs">
       <DependentUpon>Page6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page5.xaml.cs">
+    <Compile Include="Views\Page5.xaml.cs">
       <DependentUpon>Page5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page4.xaml.cs">
+    <Compile Include="Views\Page4.xaml.cs">
       <DependentUpon>Page4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page3.xaml.cs">
+    <Compile Include="Views\Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Countrys.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Page2.xaml.cs">
+    <Compile Include="Classes\Countrys.cs" />
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Views\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Page1.xaml">
+    <Page Include="Views\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page9.xaml">
+    <Page Include="Views\Page9.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Page1.xaml.cs">
+    <Compile Include="Views\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page9.xaml.cs" />
+    <Compile Include="Views\Page9.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -173,6 +191,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -180,63 +200,42 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\1.png" />
-    <Resource Include="img\2.png" />
-    <Resource Include="img\3.png" />
-    <Resource Include="img\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\report.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\7.png" />
-    <Resource Include="img\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\1.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\9.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="img\1.ico" />
+    <Resource Include="img\1.png" />
     <Resource Include="img\10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\items.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\12.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\13.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="img\14.png" />
+    <Resource Include="img\2.png" />
+    <Resource Include="img\3.png" />
+    <Resource Include="img\4.png" />
+    <Resource Include="img\5.png" />
+    <Resource Include="img\6.png" />
+    <Resource Include="img\7.png" />
+    <Resource Include="img\8.png" />
+    <Resource Include="img\9.png" />
+    <Resource Include="img\add.png" />
     <Resource Include="img\AlignCenter.png" />
     <Resource Include="img\AlignLeft.png" />
     <Resource Include="img\AlignRight.png" />
+    <Resource Include="img\arm.png" />
     <Resource Include="img\Bold.png" />
     <Resource Include="img\Copy.png" />
     <Resource Include="img\Cut.png" />
+    <Resource Include="img\eng.png" />
+    <Resource Include="img\home.png" />
     <Resource Include="img\Indent.png" />
     <Resource Include="img\IndentRemove.png" />
     <Resource Include="img\Italic.png" />
+    <Resource Include="img\items.png" />
     <Resource Include="img\Paste.png" />
+    <Resource Include="img\Percent-icon.png" />
     <Resource Include="img\Redo.png" />
+    <Resource Include="img\report.ico" />
     <Resource Include="img\Strikeout.png" />
     <Resource Include="img\Subscript.png" />
     <Resource Include="img\Superscript.png" />
@@ -244,7 +243,7 @@
     <Resource Include="img\Undo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\14.png" />
+    <Resource Include="img\payment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

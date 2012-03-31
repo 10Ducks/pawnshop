@@ -1,0 +1,219 @@
+﻿<UserControl x:Class="Lombardia.Page10"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
+
+    <Grid Name="grid2" Background="#FFF3F7FB" Margin="0,0,0,0" SizeChanged="grid2_SizeChanged">
+        <Button Content="Տպել (2 օրինակ)" Name="PrintContract1" Height="28" Width="123" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Content="Չեղյալ համարել" Margin="0,12,12,0" Name="PrintContractCancel" Width="123" Height="28" VerticalAlignment="Top" HorizontalAlignment="Right" />
+        <FlowDocumentReader xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="reader1" Margin="0,46,0,0">
+            <FlowDocument Name="conractPage1" Background="White" FontFamily="Arian AMU" PageWidth="11.65in" PageHeight="8.27in" ColumnWidth="518.4">                
+                <Paragraph>
+                    ՎԱՐԿԱՅԻՆ ՊԱՅՄԱՆԱԳԻՐ N
+                    <Run Name="contractID1">000</Run>
+                </Paragraph>
+                <Paragraph FlowDirection="RightToLeft" FontSize="12">
+                    <Run Name="DateNow">12.12.12</Run>
+                </Paragraph>
+                <Paragraph FontFamily="Arian AMU" FontSize="11">
+                    ք. Երևան "Մուսոյան ԱԱԱ" ՍՊԸ-ն (գրավատունը՝ լիցենզիա N ԳԳ-Ե 101 տրված 09 դեկտեմբերի 2005թ.), 
+                    ի դեմս գրավատան տնօրեն Լևոն Մուսոյանի և հաճախորդ
+                    <Run Name="ClientName" FontWeight="Bold" FontStyle="Italic" FontSize="12">CLIENT NAME</Run>
+                    <LineBreak/>
+                    Անձնագիր
+                    <Run Name="Passport" FontWeight="Bold" FontStyle="Italic" FontSize="12">PASSPORT</Run>
+                    կնքեցին սույն պայմանագիրը հետևյալի մասին:<LineBreak/>
+                    1. Գրավատունը վարկառուին տրամադրում է կարճաժամկետ սպառողական
+                    <Run Name="Amount" FontWeight="Bold" FontStyle="Italic" FontSize="12">AMOUNT</Run>
+                    <Run Name="AmountWords"  FontWeight="Bold" FontStyle="Italic" FontSize="12">AMOUNT AMOUNT</Run> 
+                    ՀՀ դրամի միանվագ կանխիկ վարկ մինչև
+                    <Run Name="DateNext" FontWeight="Bold" FontStyle="Italic" FontSize="12">12.12.12</Run> տարեկան
+                    <Run Name="Percent1"  FontWeight="Bold" FontStyle="Italic" FontSize="12">48.0</Run> տոկոսադրույքով: 
+                    Տարեկան փաստացի տոկոսադրույքը կազմում է
+                    <Run Name="PercentLegal"  FontWeight="Bold" FontStyle="Italic" FontSize="12">60.4</Run>:
+                    Տոկոսագումարը կազմում է ՀՀ դրամ, որի վճարումը կատարվում է ամսական կտրվածքով:
+                    Վճարման ենթակա ընդհանուր գումարը կազմում է
+                    <Run Name="Total" FontWeight="Bold" FontStyle="Italic" FontSize="12">0000.00</Run> ՀՀ դրամ:<LineBreak/>
+                    2.	Վարկառուն իր կողմից պայմանագրային պարտավորությունները ապահովելու համար գրավ է դնում 
+                    հետևյալ շարժական գույքը՝
+                </Paragraph>
+                <List FontFamily="Arian AMU" FontSize="11" Name="ItemsList" MarkerStyle="Decimal">
+                        <ListItem>
+                            <Paragraph>ListItem 1</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 2</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 3</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 4</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>ListItem 5</Paragraph>
+                        </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 6</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 7</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>ListItem 8</Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph FontFamily="Arian AMU" FontSize="11">, որը գնահատվել է
+                    <Run Name="contractID2" FontWeight="Bold" FontStyle="Italic" FontSize="12">0.00</Run> գրավատոմսով և կազմում է
+                    <Run Name="RealCost" FontWeight="Bold" FontStyle="Italic" FontSize="12">0.00</Run> ՀՀ դրամ:
+                    <LineBreak/>
+                    3. Վարկի մարումը, հաշվարկված տոկոսագումարների և տույժերի վճարումը կատարվում է ՀՀ դրամով:
+                    <LineBreak/>
+                    4. Գրավատան և վարկառուի կողմից վարկի մարման ժամկետը երկարաձգելու ցանկության դեպքում, 
+                    մինչև վարկի մարման ժամկետի լրանալը արվում է համապատասխան նշում վարկային պայմանագրի վերջում 
+                    և ստորագրվում երկուսի կողմից: Վարկի մարման ժամկետը երկաձգելու դեպքում անփւփւխ են մնում վարկի 
+                    տրամադրման մյուս պայմանները:
+                    <LineBreak/>
+                    5. Վարկառուն կարող է կատարել վարկի մասնակի մարումներ, ընդ որում.
+                    <LineBreak/>
+                    ա) Մինչև հարյուր հազար դրամ վարկի դեպքում գանձվում է պայմանագրով հաշվարկված
+                    առաջին ամսվա տոկոսավճարը, իսկ երկրորդ ամսից սկսած վարկի գումարի նվազող 
+                    մնացորդի համար հաշվարկված փաստացի օգտագործված օրերի տոկոսավճարը:
+                    <LineBreak/>
+                    բ) Հարյուր հազար և ավելի վարկի դեպքում գանձվում է վարկի գումարի նվազող մնացորդի 
+                    համար հաշվարկված փաստացի օգտագործված օրերի տոկոսավճարը:
+                    <LineBreak/>
+                    6. Գրավատան կողմից սահմանվող տարեկան փաստացի տոկոսադրույքի և ժամկետների փոփոխությունները
+                    չեն տարածվում փոփոխություն կատարելու օրվան նախորդող ժամանակահատվածում կնքված վարկային
+                    պայմանագրերի վրա և վարկային պայմանագրով սահմանված տարեկան փաստացի տոկոսադրույքը և ժամկետը
+                    մնում են անփոփոխ մինչև վարկային պայմանագրի դադարելը:
+                    <LineBreak/>
+                    7. Վարկի մարումը պայմանագրով սահմանված ժամկետում չապահովելու դեպքում, տոկոսագումարի 
+                    հաշվարկը, մինչև վարկի ամբողջական մարումը, կատարվում է տարեկան
+                    <Run Name="Percent2"  FontWeight="Bold" FontStyle="Italic" FontSize="12">000.00</Run> տոկոսադրույքով:
+                    <LineBreak/>
+                    8. Վարկատուին իրավունք է վերապահվում գրավատանը վարկի գծով ժամկետանց առաջանալու պահից
+                    ՀՀ քաղաքացիական օրենսգրքի 249 հոդվածին համապատասխան, առանց դատարան դիմելու, բռնագանձում
+                    տարածել գրավադրված գույքի վրա: Բռնագանձման ծանուցումը պատշաճ ձևով վարկառուին հանձնելուց հետո՝
+                    վերցնել գրավի առարկան իր տիրապետման տակ, որից երկու ամիս հետո կազմակերպել գրավ դրված արժեքների 
+                    իրացումը մրցույթային վաճառքի (աճուրդի) միջոցով և ստացված միջոցները ուղղել պարտավորությունների մարմանը:
+                    <LineBreak/>
+                    Գրավի իրացումից ստացված հասույթը վարկառուի ունեցած պարտավորություններին գերազանցելու դեպքում
+                    ավելագված գումարը վճարվում է վարկառուին:
+                    <LineBreak/>
+                    9. Եթե մինչև հարյուր հազար դրամ վարկի օգտագործման ամբողջ ժամանակաշրջանի համար հաշվարկված
+                    տոկոսագումարները վճարվել են վաղաժամկետ, ապա վարկի վաղաժամկետ մարման դեպքում հետ չեն 
+                    վերադարձվում ավել վճարված տոկոսագումարները:
+                    <LineBreak/>
+                    10. Վարկի օգտագործման համար հաշվարկված տոկոսագումարները սահմանված ժամկետներում չմարելու դեպքում
+                    վարկառուն վճարում է գրավատանը տույժ յուրաքանչյուր օրվա համար պարտքի 1 %-ի չափով:
+                    <LineBreak/>
+                    11. Վարկառուի կողմից վարկի գումարը վաղաժամկետ մարելու դեպքում.
+                    <LineBreak/>
+                    ա) Մինչև հարյուր հազար դրամ վարկի դեպքում գանձվում է պայմանագրով հաշվարկված առաջին ամսվա 
+                    տոկոսավճարը, իսկ երկրորդ ամսից սկսած վարկի գումարի փաստացի օգտագործված օրերի տոկոսավճարը:
+                    <LineBreak/>
+                    բ) Հարյուր հազար և ավելի վարկի դեպքում գանձվում է վարկի գումարի փաստացի օգտագործված օրերի տոկոսավճարը:
+                    <LineBreak/>
+                    12. Հարյուր հազար և ավելի վարկի դեպքում վարկառուին տրամադրվում է մտածելու ժամանակ 7 օր, որի ընթացքում
+                    վարկառուն կարող է լուծել պայմանագիրը՝ վճարելով օգտագործված օրերի տոկոսագումարը:
+                    <LineBreak/>
+                    13. Գրավատան տրամադրված վարկերը գրավի գնահատության նկատմամբ հետևյալ հարաբերակցությամբ են.
+                    <LineBreak/>
+                    ա) ոսկյա զարդերի և առարկաների գնահատված արժեքի մինչև 85%-ը
+                    <LineBreak/>
+                    բ) էլեկտրոկենցաղային իրերի գնահատված արժեքի մինչև 70%-ը
+                    <LineBreak/>
+                    գ) ավտոտրանսպորտային միջոցների գնահատված արժեքի մինչև 80%-ը
+                    <LineBreak/>
+                    14. Գրավատունը պատասխանատվություն է կրում գրավադրված գույքի համար և գրավի առարկայի փչացման
+                    կամ կորստի դեպքում փոխհատուցում է գնահատված արժեքի լրիվ չափով:
+                    <LineBreak/>
+                    15. Գրավատունը աշխատում է երկուշաբթիից-կիրակի ժամը 09.00-20.00 առանց ընդմիջման: Գրավադրված գույքը 
+                    վերադարձվում է գրավատուին երկուշաբթիից-կիրակի ժամը 11.00-18.00:
+                    <LineBreak/>
+                    16. Սույն պայմանագրի կատարման ընթացքում կողմերի միջև առաջացած բոլոր վեճերը և տարաձայնությունները լուծվում 
+                    են կողմերի բանակցությունների միջոցով: Համաձայնության չգալու դեպքում վեճերը լուծվում են ՀՀ օրենսդրությամբ կամ
+                    ֆինանսական համակարգի հաշտարարի միջոցով: Գրավատունը ֆինանսական համակարգի հաշտարարի որոշումները 
+                    վիճարկելու իրավունքից հրաժարվելու վերաբերյալ համաձայնագիր չի կնքել:
+                    <LineBreak/>
+                    17. Սույն պայմանագիրը ուժի մեջ է մտնում ստորագրման պահից և գործում է մինչև գրավատան նկատմամբ վարկառուի
+                    պարտավորությունների ամբողջական կատարումը:
+                    <LineBreak/>
+                    18. Սույն պայմանագիրը կազմված է երկու օրինակից, որոնք ունեն հավասարազոր իրավական ուժ: Նրա մեկ օրինակը
+                    մնում է գրավատանը, իսկ մյուս օրինակը տրվում է վարկառուին:
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Span FontSize="16" FontWeight="Bold" BaselineAlignment="Center">
+                        Կողմերի իրավաբանական հասցեները
+                    </Span>
+                </Paragraph>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn />
+                        <TableColumn />                        
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph FontFamily="Arian AMU" FontSize="11">
+                                    Գրավատան տնօրեն՝
+                                    <LineBreak/>
+                                    <Bold>Լևոն Մուսոյան</Bold>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    _____________________
+                                    <LineBreak/>
+                                    <Span FontSize="8" BaselineAlignment="Center">(Ստորագրությունը)</Span>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    Հասցեն՝
+                                    <Bold>ք. Երևան, Ներսիսյան 1-124</Bold>
+                                    <LineBreak/>
+                                    Հեռախոս՝
+                                    <Bold>200-800</Bold>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    Կ.Տ.
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontFamily="Arian AMU" FontSize="11">
+                                    Գույքը հանդիսանում է իմ սեփականությունը,
+                                    <LineBreak/>
+                                    պայմանագրի բոլոր կետերին ծանոթացա
+                                    <LineBreak/>
+                                    և համաձան եմ, որի համար ստորագրում եմ
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    _____________________
+                                    <LineBreak/>
+                                    <Span FontSize="8" BaselineAlignment="Center">(Ստորագրությունը)</Span>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    Վարկառու՝
+                                    <Run Name="ClientName1" FontWeight="Bold">NAME NAME</Run>
+                                    <LineBreak/>
+                                    Հասցեն՝
+                                    <Run Name="ClientAddress"  FontWeight="Bold">ADDRESS</Run>
+                                    <LineBreak/>
+                                    Հեռախոս՝
+                                    <Run Name="ClientPhone"  FontWeight="Bold">Phone</Run>
+                                    <LineBreak/>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+            
+        </FlowDocumentReader>
+        
+    </Grid>
+</UserControl>
